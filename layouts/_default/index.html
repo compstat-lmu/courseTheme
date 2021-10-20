@@ -15,8 +15,10 @@
 <li><a class="title" href="{{ .RelPermalink }}">{{.Title}}</a>
 {{ if .Pages}}
 <ul>
-  {{ range .Pages}}
+  {{ with .Pages}}
+  {{ range sort . ".File.Path"}}
   <li><a class="title" href="{{ .RelPermalink }}">{{.Title}}</a></li>
+  {{ end }}
   {{ end }}
 </ul>
 {{ end }}
