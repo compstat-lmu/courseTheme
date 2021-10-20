@@ -14,7 +14,7 @@
     <button class="btn btn-primary" id="next_{{- $pdf_id -}}">Next</button>
     <a href="{{ $pdf_url }}" target="_blank"><button class="btn btn-secondary" id="next_{{- $pdf_id -}}">PDF</button></a>
 </div>
-<div id="embed-pdf-container_{{- $pdf_id -}}">
+<div id="embed-pdf-container_{{- $pdf_id -}}" class="ar{{- .Site.Params.pdfjs_ar -}}">
     <canvas class="pdf-canvas" id="the-canvas_{{- $pdf_id -}}"></canvas>
 </div>
 </div>
